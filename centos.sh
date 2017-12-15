@@ -47,6 +47,8 @@ sudo service httpd restart
 
 sudo yum install -y mysql56-server php70-mysqlnd
 
+sudo chkconfig httpd on
+
 mysql_secure_installation
 
 #install git
