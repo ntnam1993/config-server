@@ -45,9 +45,18 @@ sudo service httpd restart
 
 # install mysql
 
-sudo yum update
-
 sudo yum install -y mysql56-server php70-mysqlnd
 
 mysql_secure_installation
 
+#install git
+
+sudo yum install git 
+
+#install composer
+cd
+sudo curl -sS https://getcomposer.org/installer | sudo php
+sudo mv composer.phar /usr/local/bin/composer
+sudo ln -s /usr/local/bin/composer /usr/bin/composer
+
+sudo yum update
