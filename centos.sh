@@ -5,11 +5,11 @@
 sudo yum update
 
 #uninstall old httpd and old php
-sudo yum remove httpd*
-sudo yum remove php*
+sudo yum remove httpd* -y
+sudo yum remove php* -y
 
 #install httpd24 for php >= 7.0
-sudo yum install httpd24
+sudo yum install httpd24 -y
 
 #install php7.1
 sudo yum install php71 -y
@@ -45,7 +45,7 @@ sudo service httpd restart
 
 # install mysql
 
-sudo yum install -y mysql56-server php70-mysqlnd
+sudo yum install -y mysql56-server php71-mysqlnd
 
 sudo chkconfig httpd on
 
