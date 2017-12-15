@@ -8,7 +8,7 @@ ubuntu  : sudo apt-get install git
  sudo mv composer.phar /usr/local/bin/composer
  sudo ln -s /usr/local/bin/composer /usr/bin/composer
 
------------------centos or amazon linux virtual-host-----------------
+-----------------centos or amazon linux virtual-host----------------- way 1 
 install httpd  : sudo yum -y install httpd24 ( to install php 7.0) 
 		sudo yum -y install httpd ( install php under 5.6 ~ 2.3 , php 5.6~2.2)
 
@@ -46,6 +46,11 @@ create virtual host : sudo mkdir -p /var/www/example.com/public_html
 		     sudo service httpd restart
 		     sudo nano /etc/hosts
 		     127.0.1.1   ip-address
+
+-----------------centos or amazon linux virtual-host----------------- way 2
+
+
+
 
 -----------------config ubuntu server-----------------
 sudo apt-get update
