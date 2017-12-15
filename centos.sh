@@ -5,8 +5,8 @@
 sudo yum update
 
 #uninstall old httpd and old php
-sudo yum remove httpd*
-sudo yum remove php*
+sudo yum remove httpd* -y
+sudo yum remove php* -y
 
 #install httpd24 for php >= 7.0
 sudo yum install httpd24
