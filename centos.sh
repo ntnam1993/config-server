@@ -9,7 +9,7 @@ sudo yum remove httpd* -y
 sudo yum remove php* -y
 
 #install httpd24 for php >= 7.0
-sudo yum install httpd24
+sudo yum install httpd24 -y
 
 #install php7.1
 sudo yum install php71 -y
