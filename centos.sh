@@ -45,7 +45,7 @@ sudo service httpd restart
 
 # install mysql
 
-sudo yum install -y mysql56-server php70-mysqlnd
+sudo yum install -y mysql56-server php71-mysqlnd
 
 sudo chkconfig httpd on
 
