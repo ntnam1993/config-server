@@ -4,12 +4,12 @@ Most required shell scripts to setup your server for the first time, install all
 
 How to run Bash file:
 
->  sh ./my_script.sh
+>  sh ./centos.sh
 > 
 > # or
 > 
->  bash ./my_script.sh
+>  bash ./centos.sh
 > 
 > # or
 > 
->  ./my_script.sh
+>  ./centos.sh
