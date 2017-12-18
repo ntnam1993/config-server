@@ -1,0 +1,29 @@
+# download adminer
+sudo wget "http://www.adminer.org/latest.php" -O /var/www/html/adminer/index.php
+# cp to place where set adminer
+cp /var/www/html/adminer/index.php /var/www/html/lms_admin/current/public/adminer.php
+#config
+sudo cp /etc/httpd/conf.d/lms_admin.conf /etc/httpd/conf.d/adminer.conf
+sudo nano /etc/httpd/conf.d/adminer.conf
+	<VirtualHost *:80>
+	    ServerAdmin webmaster@demo.dev
+	    DocumentRoot "/var/www/html/lms_admin/current/public/adminer/"
+	    ServerName 34.214.40.213/adminer
+	   <Directory "/var/www/html/lms_admin/current/public/adminer/">
+		        Options Indexes FollowSymLinks Includes ExecCGI
+		    AllowOverride All
+		    Order deny,allow
+		    Allow from all
+
+		AuthType Basic
+		AuthName "Restricted Content"
+		AuthUserFile /etc/apache2/.htpasswd
+		Require valid-user
+	    </Directory>
+	</VirtualHost>
+
+
+sudo nano /etc/hosts
+127.0.0.1	34.214.40.213/adminer
+
+sudo service httpd restart

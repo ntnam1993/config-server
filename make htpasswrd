@@ -1,0 +1,15 @@
+
+#  create htpasswd
+sudo htpasswd -c /var/www/html/lms_admin/current/public/adminer/.htpasswd user(example: name)
+
+sudo nano /etc/httpd/conf.d/auth_basic.conf
+
+	<Directory /var/www/html/lms_admin/current/public/adminer/>
+	    AuthType Basic
+	    AuthName "Basic Authentication"
+	    AuthUserFile /var/www/html/lms_admin/current/public/adminer/.htpasswd
+	    require valid-user
+	</Directory>
+
+
+sudo service httpd restart
