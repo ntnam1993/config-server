@@ -2,6 +2,8 @@
 sudo wget "http://www.adminer.org/latest.php" -O /var/www/html/adminer/index.php
 # cp to place where set adminer
 cp /var/www/html/adminer/index.php /var/www/html/lms_admin/current/public/adminer.php
+sudo mkdir /var/www/html/lms_admin/current/public/adminer
+sudo mv /var/www/html/lms_admin/current/public/adminer.php /var/www/html/lms_admin/current/public/adminer/index.php
 #config
 sudo cp /etc/httpd/conf.d/lms_admin.conf /etc/httpd/conf.d/adminer.conf
 sudo nano /etc/httpd/conf.d/adminer.conf
