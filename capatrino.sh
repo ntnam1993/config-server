@@ -6,8 +6,6 @@ sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl 
 
 curl -L https://get.rvm.io | bash -s stable --ruby
 
-source ~/.rvm/scripts/rvm
-
 # install capatrino
 sudo gem install capistrano capistrano-ext railsless-deploy
 
