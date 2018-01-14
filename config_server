@@ -4,6 +4,7 @@ ubuntu  : sudo apt-get install git
 
 -----------------install composer-----------------
  cd ~
+ sudo apt-get install curl php-cli php-mbstring git unzip
  sudo curl -sS https://getcomposer.org/installer | sudo php
  sudo mv composer.phar /usr/local/bin/composer
  sudo ln -s /usr/local/bin/composer /usr/bin/composer
